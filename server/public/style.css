@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 * {
     margin: 0;
     padding: 0;
@@ -56,6 +61,7 @@ button {
     justify-content: left;
     overflow: auto;
     flex-grow: 1;
+    color: purple;
 }
 
 .post {
@@ -121,3 +127,59 @@ button {
 .activity {
     font-style: italic;
 }
+
+/* Message styles */
+.my-message {
+    background-color: #d1f7c4; /* Light green for sender's messages */
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: right;
+}
+
+.other-message {
+    background-color: #f1f1f1; /* Light gray for others' messages */
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px 0;
+    text-align: left;
+}
+
+/* Typing notification */
+.activity {
+    font-style: italic;
+    color: #999;
+    margin: 10px 0;
+    height: 20px; /* Consistent space for activity text */
+}
+
+.splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #9FBFD2, #0D2D7B, #2E4053);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    
+}
+
+.name{
+    font-size: 16px,
+}
+
+.splash img {
+    width: 300px;
+}
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
