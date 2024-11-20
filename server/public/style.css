@@ -148,7 +148,7 @@ button {
 /* Typing notification */
 .activity {
     font-style: italic;
-    color: #999;
+    color: rgb(59 130 246) ;
     margin: 10px 0;
     height: 20px; /* Consistent space for activity text */
 }
