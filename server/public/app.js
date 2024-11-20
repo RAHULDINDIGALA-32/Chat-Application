@@ -1,4 +1,4 @@
-const socket = io('ws://localhost:3500');
+const socket = io('ws://localhost:8080');
 
 const msgInput = document.querySelector('#message');
 const nameInput = document.querySelector('#name');
@@ -41,7 +41,7 @@ function joinRoom(e) {
     if (nameInput.value && chatRoom.value) {
         socket.emit('joinRoom', {
             name: nameInput.value,
-            room: chatRoom.value
+            room: chatRoom.value 
         });
     }
 }
@@ -74,7 +74,6 @@ socket.on('userList', ({ users }) => {
 socket.on('roomList', ({ rooms }) => {
     roomList.textContent = `Active Rooms: ${rooms.join(', ')}`;
 });
-
 
 
 

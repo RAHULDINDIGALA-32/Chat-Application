@@ -6,7 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 8080;
 const ADMIN = "ChatSphere";
 
 const app = express();
@@ -27,7 +27,7 @@ const UsersState = {
 
 const io = new Server(expressServer, {
     cors: {
-        origin: process.env.NODE_ENV === "production" ? false : ["http://localhost:xxx", "http://127.0.0.1:xxx"]
+        origin: process.env.NODE_ENV === "production" ? false : ["http://localhost:xxxx", "http://127.0.0.1:xxxx"]
     }
 });
 
@@ -35,7 +35,7 @@ io.on('connection', socket => {
     console.log(`User ${socket.id} connected`);
 
     // Upon connection - only to user 
-    socket.emit('message', buildMsg(ADMIN, "Welcome to ChatShere!"));
+    socket.emit('message', buildMsg(ADMIN, "Welcome to ChatSphere!"));
 
     // Handle user joining rooms
     socket.on('joinRoom', ({ name, room }) => {
@@ -102,7 +102,7 @@ socket.on('typing', ({ name, room, isTyping }) => {
 
 });
 
-// Helper functions
+
 function buildMsg(name, text) {
     return {
         name,

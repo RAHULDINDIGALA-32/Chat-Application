@@ -14,29 +14,50 @@
 </head>
 
 <body>
-    <main>
-        <form class="form-join">
-            <input type="text" id="name" placeholder="Your name" required>
-            <input type="text" id="room" placeholder="Chat room" required>
-            <button type="submit">Join</button>
-        </form>
 
-        <ul class="chat-display"></ul>
-        <p class="user-list"></p>
-        <p class="room-list"></p>
-        <p class="activity"></p>
+     
+    <main class="bg-[#ffffff] items-center ">
+        <div class="flex flex-col mt-6 border-2 border-black pb-10 w-fit pl-10 pt-5 pr-10 ">
 
-        <form class="form-msg">
-            <input type="text" id="message" placeholder="Message to room" required>
-            <button type="submit">Send</button>
-        </form>
+            <div class="mt-8">
+                <form class="form-join text-black ">
+                    <input type="text" id="name" placeholder=" Your name" required>
+                    <input type="text" id="room" placeholder=" Chat room" required>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Join</button>
+                </form>
+            </div>
+           
+             <div>
+                <ul class="chat-display "></ul>
+             </div>
+            
+        <div class="text-black">
+            <p class="user-list"></p>
+            <p class="room-list"></p>
+            <p class="activity"></p>
+        </div>
+            
+    
+        <div class="mt-3">
+            <form class="form-msg text-black">
+                <input type="text" id="message" placeholder=" Message to room" required>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+            </form>
+        </div>
+            
+    
+    
+        <div class="mt-6">
+            <form class="form-direct-msg text-black ">
+                <input type="text" id="recipient" placeholder=" Recipient name" required>
+                <input type="text" id="directMessage" placeholder=" Direct message" required>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send</button>
+            </form>
+        </div>
+           
 
-
-        <form class="form-direct-msg">
-            <input type="text" id="recipient" placeholder="Recipient name" required>
-            <input type="text" id="directMessage" placeholder="Direct message" required>
-            <button type="submit">Send</button>
-        </form>
+        </div>
+        
     </main>
 </body>
 
